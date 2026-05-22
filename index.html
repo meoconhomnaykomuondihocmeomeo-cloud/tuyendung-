@@ -1,0 +1,338 @@
+apps/web/components.json
+
+{
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "style": "new-york",
+  "rsc": false,
+  "tsx": false,
+  "tailwind": {
+    "config": "tailwind.config.js",
+    "css": "src/index.css",
+    "baseColor": "neutral",
+    "cssVariables": true,
+    "prefix": ""
+  },
+  "iconLibrary": "lucide",
+  "rtl": false,
+  "aliases": {
+    "components": "@/components",
+    "utils": "@/lib/utils",
+    "ui": "@/components/ui",
+    "lib": "@/lib",
+    "hooks": "@/hooks"
+  },
+  "registries": {}
+}apps/web/index.html
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="https://horizons-cdn.hostinger.com/95dfd6a1-6136-4ec5-acd3-f5c700bde5d8/a40e8ba48a42ab0f10658ab79a07fc7f.png" />
+    <meta name="generator" content="Hostinger Horizons" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hostinger Horizons</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>apps/web/package.json
+
+{
+  "name": "web",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite --host :: --port 3000",
+    "build": "node tools/generate-llms.js || true && vite build --outDir ../../dist/apps/web",
+    "preview": "vite preview --host :: --port 3000",
+    "start": "vite preview --outDir ../../dist/apps/web --host :: --port 3000",
+    "lint": "eslint . --quiet"
+  },
+  "dependencies": {
+    "@emotion/is-prop-valid": "^1.3.1",
+    "@radix-ui/react-accordion": "^1.2.12",
+    "@radix-ui/react-alert-dialog": "^1.0.5",
+    "@radix-ui/react-aspect-ratio": "^1.1.8",
+    "@radix-ui/react-avatar": "^1.0.3",
+    "@radix-ui/react-checkbox": "^1.0.4",
+    "@radix-ui/react-collapsible": "^1.1.12",
+    "@radix-ui/react-context-menu": "^2.2.16",
+    "@radix-ui/react-dialog": "^1.0.5",
+    "@radix-ui/react-dropdown-menu": "^2.0.5",
+    "@radix-ui/react-hover-card": "^1.1.15",
+    "@radix-ui/react-label": "^2.0.2",
+    "@radix-ui/react-menubar": "^1.1.16",
+    "@radix-ui/react-navigation-menu": "^1.2.14",
+    "@radix-ui/react-popover": "^1.1.15",
+    "@radix-ui/react-progress": "^1.1.8",
+    "@radix-ui/react-radio-group": "^1.3.8",
+    "@radix-ui/react-scroll-area": "^1.2.10",
+    "@radix-ui/react-select": "^2.0.0",
+    "@radix-ui/react-separator": "^1.1.8",
+    "@radix-ui/react-slider": "^1.1.2",
+    "@radix-ui/react-slot": "^1.0.2",
+    "@radix-ui/react-switch": "^1.2.6",
+    "@radix-ui/react-tabs": "^1.0.4",
+    "@radix-ui/react-toast": "^1.1.5",
+    "@radix-ui/react-toggle": "^1.1.10",
+    "@radix-ui/react-toggle-group": "^1.1.11",
+    "@radix-ui/react-tooltip": "^1.2.8",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "cmdk": "^1.1.1",
+    "embla-carousel-react": "^8.6.0",
+    "framer-motion": "^10.16.4",
+    "globals": "^17.4.0",
+    "input-otp": "^1.4.2",
+    "lucide-react": "^0.285.0",
+    "next-themes": "^0.4.6",
+    "pocketbase": "^0.25.0",
+    "react": "^18.2.0",
+    "react-day-picker": "^10.0.1",
+    "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
+    "react-hook-form": "^7.76.0",
+    "react-resizable-panels": "^4.11.1",
+    "react-router-dom": "^6.16.0",
+    "recharts": "^3.8.1",
+    "sonner": "^2.0.7",
+    "tailwind-merge": "^1.14.0",
+    "tailwindcss-animate": "^1.0.7",
+    "vaul": "^1.1.2"
+  },
+  "devDependencies": {
+    "@babel/generator": "^7.27.0",
+    "@babel/parser": "^7.27.0",
+    "@babel/traverse": "^7.27.0",
+    "@babel/types": "^7.27.0",
+    "@types/node": "^20.8.3",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react": "^4.0.3",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.57.1",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-react": "^7.37.3",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.3",
+    "terser": "^5.39.0",
+    "vite": "^4.4.5"
+  }
+}apps/web/postcss.config.js
+
+export default {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+};apps/web/src/AboutSection.jsx
+
+import React from 'react';
+import { motion } from 'framer-motion';
+import { useInView } from '@/hooks/useInView';
+
+const AboutSection = React.forwardRef((props, ref) => {
+  const [sectionRef, isInView] = useInView({
+    threshold: 0.2,
+    triggerOnce: true
+  });
+  
+  const setRefs = node => {
+    sectionRef.current = node;
+    if (typeof ref === 'function') {
+      ref(node);
+    } else if (ref) {
+      ref.current = node;
+    }
+  };
+
+  return <section ref={setRefs} className="py-24 bg-[#F5F1EB]">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <motion.div initial={{
+          opacity: 0,
+          x: -50
+        }} animate={isInView ? {
+          opacity: 1,
+          x: 0
+        } : {}} transition={{
+          duration: 0.8
+        }}>
+            <span className="text-[#8B7355] text-sm tracking-[0.2em] uppercase mb-4 block">Est. 1961</span>
+            <h2 className="text-4xl md:text-5xl font-light text-[#6B5D4F] mb-6 leading-tight">
+              Honest, Simple,
+              <br />
+              Heartfelt, Delicious
+            </h2>
+            <p className="text-[#6B5D4F]/80 leading-relaxed mb-8">
+              At Saint-Laurent, we believe that true culinary artistry lies in simplicity and the finest ingredients.
+              Established in 1961, our philosophy has always been to serve natural, healthy, and incredibly tasty dishes.
+              Dine with us to experience a symphony of flavors, meticulously crafted with heart-felt honesty,
+              turning every meal into a cherished memory. Our chefs are dedicated to creating an unforgettable journey for your palate,
+              ensuring each visit is a celebration of exquisite cuisine and warm hospitality.
+            </p>
+          </motion.div>
+
+          <motion.div initial={{
+          opacity: 0,
+          x: 50
+        }} animate={isInView ? {
+          opacity: 1,
+          x: 0
+        } : {}} transition={{
+          duration: 0.8,
+          delay: 0.2
+        }} className="relative">
+            <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-2xl">
+              <img className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" alt="Gourmet steak dish with vegetables" src="https://images.unsplash.com/photo-1692296979430-13bee2e264f3" />
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </section>;
+});
+export default AboutSection;apps/web/src/App.jsx
+
+import React, { useRef } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
+import Home from '@/pages/Home';
+import MenuPage from '@/pages/MenuPage';
+import { Toaster } from '@/components/ui/toaster';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+
+function App() {
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
+
+  const aboutRef = useRef(null);
+  const menuRef = useRef(null);
+  const reservationsRef = useRef(null);
+  const contactRef = useRef(null);
+
+  const sectionRefs = {
+    about: aboutRef,
+    menu: menuRef,
+    reservations: reservationsRef,
+    contact: contactRef,
+  };
+
+  return (
+    <>
+      <Header sectionRefs={sectionRefs} />
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<Home refs={sectionRefs} />} />
+          <Route path="/menu" element={<MenuPage />} />
+        </Routes>
+      </AnimatePresence>
+      {isHomePage && <Footer ref={contactRef} />}
+      <Toaster />
+    </>
+  );
+}
+
+export default App;apps/web/tailwind.config.js
+
+/ @type {import('tailwindcss').Config} */
+module.exports = {
+  darkMode: ['class'],
+  content: [
+    './pages//*.{js,jsx}',
+    './components//*.{js,jsx}',
+    './app//*.{js,jsx}',
+    './src/**/*.{js,jsx}',
+  ],
+  theme: {
+    container: {
+      center: true,
+      padding: '2rem',
+      screens: {
+        '2xl': '1400px',
+      },
+    },
+    extend: {
+      colors: {
+        border: 'hsl(var(--border))',
+        input: 'hsl(var(--input))',
+        ring: 'hsl(var(--ring))',
+        background: 'hsl(var(--background))',
+        foreground: 'hsl(var(--foreground))',
+        primary: {
+          DEFAULT: 'hsl(var(--primary))',
+          foreground: 'hsl(var(--primary-foreground))',
+        },
+        secondary: {
+          DEFAULT: 'hsl(var(--secondary))',
+          foreground: 'hsl(var(--secondary-foreground))',
+        },
+        destructive: {
+          DEFAULT: 'hsl(var(--destructive))',
+          foreground: 'hsl(var(--destructive-foreground))',
+        },
+        muted: {
+          DEFAULT: 'hsl(var(--muted))',
+          foreground: 'hsl(var(--muted-foreground))',
+        },
+        accent: {
+          DEFAULT: 'hsl(var(--accent))',
+          foreground: 'hsl(var(--accent-foreground))',
+        },
+        popover: {
+          DEFAULT: 'hsl(var(--popover))',
+          foreground: 'hsl(var(--popover-foreground))',
+        },
+        card: {
+          DEFAULT: 'hsl(var(--card))',
+          foreground: 'hsl(var(--card-foreground))',
+        },
+      },
+      borderRadius: {
+        lg: 'var(--radius)',
+        md: 'calc(var(--radius) - 2px)',
+        sm: 'calc(var(--radius) - 4px)',
+      },
+      keyframes: {
+        'accordion-down': {
+          from: { height: 0 },
+          to: { height: 'var(--radix-accordion-content-height)' },
+        },
+        'accordion-up': {
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: 0 },
+        },
+      },
+      animation: {
+        'accordion-down': 'accordion-down 0.2s ease-out',
+        'accordion-up': 'accordion-up 0.2s ease-out',
+      },
+    },
+  },
+  plugins: [require('tailwindcss-animate')],
+};package.json
+
+
+{
+  "name": "monorepo",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently --kill-others --raw \"npm run dev --prefix apps/web\" \"npm run dev --prefix apps/pocketbase\"",
+    "build": "concurrently --raw \"npm run build --prefix apps/web\"",
+    "start": "concurrently --kill-others --raw \"npm run start --prefix apps/pocketbase\"",
+    "lint": "concurrently --raw \"npm run lint --prefix apps/web\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "workspaces": [
+    "apps/*"
+  ]
+}
