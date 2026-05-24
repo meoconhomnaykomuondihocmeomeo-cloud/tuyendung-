@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>VinFast Vietnam - Tuyển Dụng VinFast</title>
+<title>VinFast Careers - Tuyển Dụng Chuyên Nghiệp</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
+
+/* RESET */
 
 *{
     margin:0;
@@ -35,14 +40,16 @@ header{
     top:0;
     left:0;
     z-index:999;
-    background:#0f172a;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    background:rgba(15,23,42,0.92);
+    backdrop-filter:blur(10px);
+    box-shadow:0 2px 15px rgba(0,0,0,0.1);
 }
 
 .navbar{
     width:90%;
     margin:auto;
     height:85px;
+
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -50,7 +57,7 @@ header{
 
 .logo{
     color:#fff;
-    font-size:30px;
+    font-size:32px;
     font-weight:800;
 }
 
@@ -64,8 +71,8 @@ header{
 }
 
 .nav-links a{
-    text-decoration:none;
     color:#fff;
+    text-decoration:none;
     font-weight:500;
     transition:0.3s;
 }
@@ -82,50 +89,70 @@ header{
     color:#fff;
     font-weight:700;
     cursor:pointer;
-    transition:0.3s;
-}
-
-.nav-btn:hover{
-    background:#2563eb;
 }
 
 /* HERO */
 
 .hero{
-    min-height:100vh;
+    width:100%;
+    height:100vh;
+
     background:
-    linear-gradient(rgba(15,23,42,0.82),rgba(15,23,42,0.82)),
-    url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1400');
+    linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
+    url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1600');
 
     background-size:cover;
     background-position:center;
 
     display:flex;
     align-items:center;
+
+    padding:120px 8%;
 }
 
-.hero-container{
-    width:90%;
-    margin:auto;
-
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:60px;
-    align-items:center;
+.hero-content{
+    max-width:700px;
 }
 
-.hero-text h1{
+.hero-tag{
+    display:inline-block;
+
+    padding:10px 22px;
+
+    background:rgba(255,255,255,0.12);
+
+    border:1px solid rgba(255,255,255,0.2);
+
+    backdrop-filter:blur(10px);
+
     color:#fff;
-    font-size:68px;
-    line-height:1.1;
+
+    border-radius:999px;
+
+    font-size:14px;
+    font-weight:700;
+
     margin-bottom:25px;
 }
 
-.hero-text p{
-    color:#cbd5e1;
-    line-height:1.9;
+.hero h1{
+    color:#fff;
+
+    font-size:72px;
+
+    line-height:1.1;
+
+    margin-bottom:25px;
+}
+
+.hero p{
+    color:#dbe4f0;
+
     font-size:18px;
-    margin-bottom:35px;
+
+    line-height:1.9;
+
+    margin-bottom:40px;
 }
 
 .hero-buttons{
@@ -134,73 +161,22 @@ header{
     flex-wrap:wrap;
 }
 
-.primary-btn{
-    padding:18px 38px;
+.hero-btn{
+    padding:18px 35px;
     background:#3b82f6;
-    border:none;
-    border-radius:16px;
     color:#fff;
-    font-size:16px;
+    text-decoration:none;
+    border-radius:16px;
     font-weight:700;
-    cursor:pointer;
 }
 
-.secondary-btn{
-    padding:18px 38px;
-    background:transparent;
+.hero-btn-outline{
+    padding:18px 35px;
     border:2px solid #fff;
-    border-radius:16px;
     color:#fff;
-    font-size:16px;
-    font-weight:700;
-    cursor:pointer;
-}
-
-/* SEARCH */
-
-.search-box{
-    background:#fff;
-    padding:40px;
-    border-radius:30px;
-    box-shadow:0 25px 60px rgba(0,0,0,0.18);
-}
-
-.search-box h3{
-    margin-bottom:30px;
-    font-size:32px;
-}
-
-.input-group{
-    margin-bottom:20px;
-}
-
-.input-group label{
-    display:block;
-    margin-bottom:8px;
-    font-weight:600;
-}
-
-.input-group input,
-.input-group select,
-textarea{
-    width:100%;
-    padding:16px;
-    border:1px solid #dbe3ef;
-    border-radius:14px;
-    outline:none;
-    font-size:15px;
-}
-
-.submit-btn{
-    width:100%;
-    padding:18px;
-    border:none;
+    text-decoration:none;
     border-radius:16px;
-    background:#3b82f6;
-    color:#fff;
-    font-size:16px;
     font-weight:700;
-    cursor:pointer;
 }
 
 /* SECTION */
@@ -229,65 +205,34 @@ section{
     font-size:18px;
 }
 
-/* BANNER */
+/* ABOUT */
 
-.intro-banner{
-    background:#fff;
-}
-
-.intro-grid{
+.about-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:60px;
     align-items:center;
 }
 
-.intro-grid img{
+.about-grid img{
     width:100%;
     border-radius:30px;
-    box-shadow:0 20px 50px rgba(0,0,0,0.15);
 }
 
-.tag{
-    display:inline-block;
-    background:#dbeafe;
-    color:#2563eb;
-    padding:10px 20px;
-    border-radius:999px;
-    font-size:14px;
-    font-weight:700;
-    margin-bottom:25px;
-}
-
-.intro-content h2{
+.about-content h2{
     font-size:52px;
-    line-height:1.3;
     margin-bottom:25px;
 }
 
-.intro-content p{
+.about-content p{
     color:#64748b;
     line-height:1.9;
-    margin-bottom:30px;
+    margin-bottom:25px;
 }
 
-.intro-list{
-    margin-bottom:35px;
-}
-
-.intro-item{
+.about-item{
     margin-bottom:15px;
     font-weight:600;
-}
-
-.intro-btn{
-    padding:18px 35px;
-    background:#3b82f6;
-    color:#fff;
-    border:none;
-    border-radius:16px;
-    font-weight:700;
-    cursor:pointer;
 }
 
 /* STATS */
@@ -299,15 +244,17 @@ section{
 .stats-grid{
     width:90%;
     margin:auto;
+
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
     gap:30px;
 }
 
 .stat-card{
     background:#111c34;
     padding:45px;
-    border-radius:26px;
+    border-radius:30px;
     text-align:center;
 }
 
@@ -325,7 +272,7 @@ section{
 
 .job-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
     gap:35px;
 }
 
@@ -341,57 +288,81 @@ section{
     transform:translateY(-8px);
 }
 
-.job-top{
-    display:flex;
-    justify-content:space-between;
-    margin-bottom:25px;
-}
-
 .badge{
+    display:inline-block;
+    padding:8px 15px;
+    border-radius:999px;
     background:#dbeafe;
     color:#2563eb;
-    padding:8px 14px;
-    border-radius:999px;
     font-size:13px;
     font-weight:700;
+    margin-bottom:20px;
 }
 
 .job-card h3{
     font-size:30px;
-    margin-bottom:15px;
-}
-
-.company{
-    color:#2563eb;
-    font-weight:700;
-    margin-bottom:15px;
+    margin-bottom:18px;
 }
 
 .job-info{
     color:#64748b;
-    line-height:1.8;
+    line-height:1.9;
+    margin-bottom:30px;
 }
 
-.job-footer{
-    margin-top:30px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+.job-btn{
+    display:inline-block;
+    padding:15px 28px;
+    background:#3b82f6;
+    color:#fff;
+    text-decoration:none;
+    border-radius:14px;
+    font-weight:700;
 }
 
-.salary{
-    font-size:24px;
-    font-weight:800;
+/* APPLY LINKS */
+
+.apply-links{
+    background:#f8fafc;
+}
+
+.apply-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.apply-card{
+    background:#0f172a;
+    color:#fff;
+    padding:35px;
+    border-radius:30px;
+}
+
+.apply-card h3{
+    font-size:28px;
+    margin:20px 0;
+}
+
+.apply-card ul{
+    list-style:none;
+    margin-bottom:35px;
+}
+
+.apply-card ul li{
+    margin-bottom:15px;
+    color:#cbd5e1;
 }
 
 .apply-btn{
-    padding:14px 24px;
-    border:none;
-    border-radius:14px;
+    display:block;
+    text-align:center;
+    padding:16px;
     background:#3b82f6;
     color:#fff;
+    text-decoration:none;
+    border-radius:14px;
     font-weight:700;
-    cursor:pointer;
 }
 
 /* FEATURES */
@@ -407,7 +378,7 @@ section{
     padding:45px;
     border-radius:30px;
     text-align:center;
-    box-shadow:0 10px 25px rgba(0,0,0,0.06);
+    box-shadow:0 10px 30px rgba(0,0,0,0.05);
 }
 
 .feature-icon{
@@ -416,8 +387,8 @@ section{
 }
 
 .feature-card h3{
-    margin-bottom:18px;
     font-size:28px;
+    margin-bottom:18px;
 }
 
 .feature-card p{
@@ -425,73 +396,64 @@ section{
     line-height:1.8;
 }
 
-/* BLOG */
+/* CONTACT */
 
-.blog-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
-    gap:35px;
-}
-
-.blog-card{
-    background:#fff;
-    border-radius:30px;
-    overflow:hidden;
-    box-shadow:0 10px 25px rgba(0,0,0,0.06);
-}
-
-.blog-card img{
-    width:100%;
-    height:240px;
-    object-fit:cover;
-}
-
-.blog-content{
-    padding:30px;
-}
-
-.blog-content h3{
-    margin-bottom:18px;
-}
-
-.blog-content p{
-    color:#64748b;
-    line-height:1.8;
-    margin-bottom:25px;
-}
-
-.blog-btn{
-    padding:14px 24px;
-    border:none;
-    border-radius:14px;
-    background:#3b82f6;
-    color:#fff;
-    cursor:pointer;
-}
-
-/* APPLY */
-
-.apply-section{
+.contact{
     background:#0f172a;
 }
 
-.form-box{
+.contact-box{
     max-width:850px;
     margin:auto;
+
     background:#fff;
+
     padding:55px;
+
     border-radius:35px;
 }
 
-.form-box h2{
+.contact-box h2{
     text-align:center;
     margin-bottom:35px;
     font-size:42px;
 }
 
+.input-group{
+    margin-bottom:22px;
+}
+
+.input-group label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:600;
+}
+
+.input-group input,
+.input-group textarea,
+.input-group select{
+    width:100%;
+    padding:16px;
+    border:1px solid #dbe3ef;
+    border-radius:14px;
+    outline:none;
+}
+
 textarea{
-    height:140px;
+    height:150px;
     resize:none;
+}
+
+.submit-btn{
+    width:100%;
+    padding:18px;
+    border:none;
+    border-radius:16px;
+    background:#3b82f6;
+    color:#fff;
+    font-size:16px;
+    font-weight:700;
+    cursor:pointer;
 }
 
 /* FOOTER */
@@ -505,9 +467,12 @@ footer{
 .footer-grid{
     width:90%;
     margin:auto;
+
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
     gap:40px;
+
     margin-bottom:50px;
 }
 
@@ -515,8 +480,8 @@ footer{
     margin-bottom:25px;
 }
 
-.footer-box a,
-.footer-box p{
+.footer-box p,
+.footer-box a{
     color:#cbd5e1;
     text-decoration:none;
     line-height:2;
@@ -526,25 +491,24 @@ footer{
     width:90%;
     margin:auto;
     text-align:center;
-    border-top:1px solid rgba(255,255,255,0.1);
     padding-top:30px;
+    border-top:1px solid rgba(255,255,255,0.1);
     color:#94a3b8;
 }
 
-/* RESPONSIVE */
+/* MOBILE */
 
 @media(max-width:1000px){
 
-    .hero-container,
-    .intro-grid{
+    .about-grid{
         grid-template-columns:1fr;
     }
 
-    .hero-text h1{
-        font-size:48px;
+    .hero h1{
+        font-size:52px;
     }
 
-    .intro-content h2{
+    .about-content h2{
         font-size:38px;
     }
 
@@ -564,17 +528,18 @@ footer{
         justify-content:center;
     }
 
-    .hero-text h1{
+    .hero h1{
         font-size:38px;
     }
 
     .section-title h2{
-        font-size:36px;
+        font-size:34px;
     }
 
 }
 
 </style>
+
 </head>
 
 <body>
@@ -594,12 +559,11 @@ Vin<span>Fast</span>
 <a href="#">Trang Chủ</a>
 <a href="#jobs">Việc Làm</a>
 <a href="#features">Tính Năng</a>
-<a href="#blog">Tin Tức</a>
-<a href="#apply">Ứng Tuyển</a>
+<a href="#contact">Ứng Tuyển</a>
 
 </div>
 
-<button class="nav-btn" onclick="showMessage()">
+<button class="nav-btn">
 Đăng Tuyển
 </button>
 
@@ -611,67 +575,30 @@ Vin<span>Fast</span>
 
 <section class="hero">
 
-<div class="hero-container">
+<div class="hero-content">
 
-<div class="hero-text">
+<span class="hero-tag">
+TUYỂN DỤNG VINFAST 2026
+</span>
 
 <h1>
-Tuyển Dụng VinFast
+Tuyển dụng nhân sự cho xe điện VinFast
 </h1>
 
 <p>
-VinFast tiên phong kiến tạo tương lai di chuyển xanh với nền tảng tuyển dụng hiện đại, kết nối nhân tài cùng môi trường làm việc chuyên nghiệp, đổi mới và đẳng cấp quốc tế.
+Môi trường làm việc chuyên nghiệp, thu nhập hấp dẫn, 
+cơ hội phát triển toàn cầu cùng hệ sinh thái xe điện hàng đầu Việt Nam.
 </p>
 
 <div class="hero-buttons">
 
-<button class="primary-btn" onclick="scrollToJobs()">
-Tìm Việc Ngay
-</button>
+<a href="#jobs" class="hero-btn">
+Xem việc làm
+</a>
 
-<button class="secondary-btn" onclick="scrollToApply()">
-Ứng Tuyển
-</button>
-
-</div>
-
-</div>
-
-<div class="search-box">
-
-<h3>Tìm kiếm việc làm</h3>
-
-<div class="input-group">
-<label>Vị trí công việc</label>
-<input type="text" placeholder="Frontend Developer">
-</div>
-
-<div class="input-group">
-<label>Khu vực</label>
-
-<select>
-<option>Hà Nội</option>
-<option>TP Hồ Chí Minh</option>
-<option>Đà Nẵng</option>
-<option>Cần Thơ</option>
-</select>
-
-</div>
-
-<div class="input-group">
-<label>Mức lương</label>
-
-<select>
-<option>10 - 20 triệu</option>
-<option>20 - 30 triệu</option>
-<option>30+ triệu</option>
-</select>
-
-</div>
-
-<button class="submit-btn" onclick="searchJobs()">
-Tìm Việc
-</button>
+<a href="#contact" class="hero-btn-outline">
+Ứng tuyển ngay
+</a>
 
 </div>
 
@@ -679,53 +606,41 @@ Tìm Việc
 
 </section>
 
-<!-- INTRO -->
+<!-- ABOUT -->
 
-<section class="intro-banner">
+<section>
 
 <div class="container">
 
-<div class="intro-grid">
+<div class="about-grid">
 
-<img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1400&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1400">
 
-<div class="intro-content">
-
-<span class="tag">
-TOP NỀN TẢNG TUYỂN DỤNG
-</span>
+<div class="about-content">
 
 <h2>
-Kết Nối Hơn 10.000+ Ứng Viên Và Doanh Nghiệp
+Kiến Tạo Tương Lai Cùng VinFast
 </h2>
 
 <p>
-CareerHub mang đến giải pháp tuyển dụng toàn diện với giao diện hiện đại, dễ sử dụng và tối ưu hiệu quả tuyển dụng.
+Chúng tôi không ngừng tìm kiếm nhân tài để đồng hành trên hành trình phát triển xe điện thông minh và bền vững.
 </p>
 
-<div class="intro-list">
-
-<div class="intro-item">
-✅ 2500+ doanh nghiệp đồng hành
+<div class="about-item">
+✅ Môi trường quốc tế
 </div>
 
-<div class="intro-item">
-✅ AI lọc hồ sơ thông minh
+<div class="about-item">
+✅ Thu nhập cạnh tranh
 </div>
 
-<div class="intro-item">
-✅ Tối ưu mobile & desktop
+<div class="about-item">
+✅ Đào tạo chuyên sâu
 </div>
 
-<div class="intro-item">
-✅ Hệ thống tuyển dụng chuyên nghiệp
+<div class="about-item">
+✅ Cơ hội thăng tiến cao
 </div>
-
-</div>
-
-<button class="intro-btn" onclick="scrollToApply()">
-Ứng Tuyển Ngay
-</button>
 
 </div>
 
@@ -743,22 +658,22 @@ CareerHub mang đến giải pháp tuyển dụng toàn diện với giao diện
 
 <div class="stat-card">
 <h3>10K+</h3>
-<p>Ứng viên hoạt động</p>
+<p>Nhân sự toàn quốc</p>
 </div>
 
 <div class="stat-card">
 <h3>2500+</h3>
-<p>Doanh nghiệp</p>
-</div>
-
-<div class="stat-card">
-<h3>5000+</h3>
-<p>Việc làm mới</p>
+<p>Vị trí tuyển dụng</p>
 </div>
 
 <div class="stat-card">
 <h3>98%</h3>
-<p>Khách hàng hài lòng</p>
+<p>Ứng viên hài lòng</p>
+</div>
+
+<div class="stat-card">
+<h3>24/7</h3>
+<p>Hỗ trợ tuyển dụng</p>
 </div>
 
 </div>
@@ -773,10 +688,10 @@ CareerHub mang đến giải pháp tuyển dụng toàn diện với giao diện
 
 <div class="section-title">
 
-<h2>Dự Án Trọng Điểm</h2>
+<h2>Vị Trí Tuyển Dụng</h2>
 
 <p>
-Khám phá các vị trí tuyển dụng mới nhất hôm nay
+Các vị trí nổi bật đang tuyển hôm nay
 </p>
 
 </div>
@@ -785,271 +700,72 @@ Khám phá các vị trí tuyển dụng mới nhất hôm nay
 
 <div class="job-card">
 
-<div class="job-top">
-<div class="badge">HOT</div>
-<div>Full Time</div>
-</div>
-
-<h3>Frontend Developer</h3>
-
-<div class="company">
-FPT Software
-</div>
-
-<div class="job-info">
-📍 Hà Nội <br>
-💻 ReactJS / HTML / CSS <br>
-🕒 Hạn nộp: 30/12/2026
-</div>
-
-<div class="job-footer">
-
-<div class="salary">
-25 triệu
-</div>
-
-<button class="apply-btn" onclick="applyJob('Frontend Developer')">
-Ứng Tuyển
-</button>
-
-</div>
-
-</div>
-
-<div class="job-card">
-
-<div class="job-top">
-<div class="badge">NEW</div>
-<div>Remote</div>
-</div>
-
-<h3>Digital Marketing</h3>
-
-<div class="company">
-Shopee Vietnam
-</div>
-
-<div class="job-info">
-📍 TP Hồ Chí Minh <br>
-📈 Facebook Ads / Google Ads <br>
-🕒 Hạn nộp: 05/01/2027
-</div>
-
-<div class="job-footer">
-
-<div class="salary">
-18 triệu
-</div>
-
-<button class="apply-btn" onclick="applyJob('Digital Marketing')">
-Ứng Tuyển
-</button>
-
-</div>
-
-</div>
-
-<div class="job-card">
-
-<div class="job-top">
-<div class="badge">VIP</div>
-<div>Hybrid</div>
-</div>
-
-<h3>UI UX Designer</h3>
-
-<div class="company">
-VNG Corporation
-</div>
-
-<div class="job-info">
-📍 Đà Nẵng <br>
-🎨 Figma / Photoshop / UI UX <br>
-🕒 Hạn nộp: 15/01/2027
-</div>
-
-<div class="job-footer">
-
-<div class="salary">
-30 triệu
-</div>
-
-<button class="apply-btn" onclick="applyJob('UI UX Designer')">
-Ứng Tuyển
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- FEATU<!--
-THÊM SECTION NÀY NGAY BÊN DƯỚI "VIỆC LÀM NỔI BẬT"
-SECTION NÀY CHO PHÉP BẠN GẮN LINK ỨNG TUYỂN THẬT
-KHI NHẤN SẼ MỞ LINK KHẢO SÁT / FORM
--->
-
-<section class="apply-links">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>Vị Trí Ứng Tuyển</h2>
-
-<p>
-Lựa chọn vị trí phù hợp và ứng tuyển trực tiếp ngay hôm nay
-</p>
-
-</div>
-
-<div class="apply-grid">
-
-<!-- CARD 1 -->
-
-<div class="apply-card">
-
-<div class="apply-top">
-
-<div class="apply-badge">
+<div class="badge">
 HOT
 </div>
 
-<h3>
-Nhân Viên Kinh Doanh
-</h3>
+<h3>Nhân Viên Kinh Doanh</h3>
+
+<div class="job-info">
+
+📍 Hà Nội <br><br>
+
+💰 15 - 30 triệu <br><br>
+
+🕒 Full Time
 
 </div>
 
-<ul>
-
-<li>✔ Lương hấp dẫn + thưởng KPI</li>
-<li>✔ Môi trường chuyên nghiệp</li>
-<li>✔ Cơ hội thăng tiến cao</li>
-<li>✔ Được đào tạo bài bản</li>
-
-</ul>
-
-<a 
-href="https://khaosat.me/survey/so-khao-vi-tri-nhan-vien-kinh-doanh-vinfast-5e4ce8e"
-target="_blank"
-class="apply-link-btn">
-
-ỨNG TUYỂN NGAY
-
+<a href="https://khaosat.me/survey/so-khao-vi-tri-nhan-vien-kinh-doanh-vinfast-5e4ce8e" target="_blank" class="job-btn">
+Ứng Tuyển Ngay
 </a>
 
 </div>
 
-<!-- CARD 2 -->
+<div class="job-card">
 
-<div class="apply-card">
-
-<div class="apply-top">
-
-<div class="apply-badge">
+<div class="badge">
 NEW
 </div>
 
-<h3>
-Kế Toán Tổng Hợp
-</h3>
+<h3>Kế Toán Tổng Hợp</h3>
+
+<div class="job-info">
+
+📍 TP Hồ Chí Minh <br><br>
+
+💰 18 - 25 triệu <br><br>
+
+🕒 Full Time
 
 </div>
 
-<ul>
-
-<li>✔ Thành thạo Excel</li>
-<li>✔ Kinh nghiệm kế toán</li>
-<li>✔ Môi trường ổn định</li>
-<li>✔ Chế độ đầy đủ</li>
-
-</ul>
-
-<a 
-href="https://khaosat.me/survey/so-khao-vi-tri-ke-toan-tong-hop-vinfast-42e4ed9"
-target="_blank"
-class="apply-link-btn">
-
-ỨNG TUYỂN NGAY
-
+<a href="https://khaosat.me/survey/so-khao-vi-tri-ke-toan-tong-hop-vinfast-42e4ed9" target="_blank" class="job-btn">
+Ứng Tuyển Ngay
 </a>
 
 </div>
 
-<!-- CARD 3 -->
+<div class="job-card">
 
-<div class="apply-card">
-
-<div class="apply-top">
-
-<div class="apply-badge">
+<div class="badge">
 VIP
 </div>
 
-<h3>
-Nhân Viên Xuất Nhập Khẩu
-</h3>
+<h3>Xuất Nhập Khẩu</h3>
+
+<div class="job-info">
+
+📍 Hải Phòng <br><br>
+
+💰 20 - 35 triệu <br><br>
+
+🕒 Hybrid
 
 </div>
 
-<ul>
-
-<li>✔ Làm việc quốc tế</li>
-<li>✔ Thu nhập hấp dẫn</li>
-<li>✔ Có cơ hội công tác</li>
-<li>✔ Môi trường năng động</li>
-
-</ul>
-
-<a 
-href="https://khaosat.me/survey/khao-sat-nhan-vien-xuat-nhap-khau-vinfast-2026-42e3da4"
-target="_blank"
-class="apply-link-btn">
-
-ỨNG TUYỂN NGAY
-
-</a>
-
-</div>
-
-<!-- CARD 4 -->
-
-<div class="apply-card">
-
-<div class="apply-top">
-
-<div class="apply-badge">
-HOT
-</div>
-
-<h3>
-Hành Chính - Văn Phòng
-</h3>
-
-</div>
-
-<ul>
-
-<li>✔ Giờ hành chính</li>
-<li>✔ Môi trường hiện đại</li>
-<li>✔ Hỗ trợ nhân sự</li>
-<li>✔ Chế độ BHXH đầy đủ</li>
-
-</ul>
-
-<a 
-href="https://khaosat.me/survey/so-khao-vi-tri-hanh-chinh-van-phong-vinfast-e320b5b"
-target="_blank"
-class="apply-link-btn">
-
-ỨNG TUYỂN NGAY
-
+<a href="https://khaosat.me/survey/khao-sat-nhan-vien-xuat-nhap-khau-vinfast-2026-42e3da4" target="_blank" class="job-btn">
+Ứng Tuyển Ngay
 </a>
 
 </div>
@@ -1060,92 +776,7 @@ class="apply-link-btn">
 
 </section>
 
-<style>
-
-/* APPLY LINKS */
-
-.apply-links{
-    background:#f8fafc;
-}
-
-.apply-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:30px;
-}
-
-.apply-card{
-    background:#0f172a;
-    color:#fff;
-    padding:35px;
-    border-radius:28px;
-    transition:0.3s;
-    position:relative;
-    overflow:hidden;
-}
-
-.apply-card:hover{
-    transform:translateY(-8px);
-}
-
-.apply-top{
-    margin-bottom:25px;
-}
-
-.apply-badge{
-    display:inline-block;
-    background:#3b82f6;
-    padding:8px 16px;
-    border-radius:999px;
-    font-size:13px;
-    font-weight:700;
-    margin-bottom:20px;
-}
-
-.apply-card h3{
-    font-size:28px;
-    line-height:1.4;
-}
-
-.apply-card ul{
-    list-style:none;
-    margin-bottom:35px;
-}
-
-.apply-card ul li{
-    margin-bottom:15px;
-    color:#cbd5e1;
-    line-height:1.7;
-}
-
-.apply-link-btn{
-    display:block;
-    width:100%;
-    text-align:center;
-    padding:16px;
-    background:#3b82f6;
-    color:#fff;
-    text-decoration:none;
-    border-radius:14px;
-    font-weight:700;
-    transition:0.3s;
-}
-
-.apply-link-btn:hover{
-    background:#2563eb;
-}
-
-/* MOBILE */
-
-@media(max-width:700px){
-
-    .apply-card h3{
-        font-size:22px;
-    }
-
-}
-
-</style>RES -->
+<!-- FEATURES -->
 
 <section id="features">
 
@@ -1153,10 +784,10 @@ class="apply-link-btn">
 
 <div class="section-title">
 
-<h2>Tính Năng Nổi Bật</h2>
+<h2>Tại Sao Chọn VinFast?</h2>
 
 <p>
-Hệ thống tuyển dụng hiện đại và chuyên nghiệp
+Những giá trị tạo nên môi trường làm việc hàng đầu
 </p>
 
 </div>
@@ -1169,10 +800,10 @@ Hệ thống tuyển dụng hiện đại và chuyên nghiệp
 🚀
 </div>
 
-<h3>Tuyển Dụng Nhanh</h3>
+<h3>Tăng Trưởng Nhanh</h3>
 
 <p>
-Tiếp cận hàng ngàn ứng viên chất lượng chỉ trong vài phút.
+Lộ trình phát triển rõ ràng cùng cơ hội thăng tiến rộng mở.
 </p>
 
 </div>
@@ -1180,13 +811,13 @@ Tiếp cận hàng ngàn ứng viên chất lượng chỉ trong vài phút.
 <div class="feature-card">
 
 <div class="feature-icon">
-⚡
+🌍
 </div>
 
-<h3>AI Thông Minh</h3>
+<h3>Môi Trường Quốc Tế</h3>
 
 <p>
-Hệ thống AI hỗ trợ lọc CV và gợi ý ứng viên phù hợp.
+Làm việc cùng đội ngũ chuyên gia toàn cầu.
 </p>
 
 </div>
@@ -1194,13 +825,13 @@ Hệ thống AI hỗ trợ lọc CV và gợi ý ứng viên phù hợp.
 <div class="feature-card">
 
 <div class="feature-icon">
-📈
+💎
 </div>
 
-<h3>Tăng Hiệu Quả</h3>
+<h3>Đãi Ngộ Hấp Dẫn</h3>
 
 <p>
-Tối ưu tỷ lệ tuyển dụng và tiết kiệm chi phí doanh nghiệp.
+Chính sách lương thưởng và phúc lợi cạnh tranh.
 </p>
 
 </div>
@@ -1211,90 +842,26 @@ Tối ưu tỷ lệ tuyển dụng và tiết kiệm chi phí doanh nghiệp.
 
 </section>
 
-<!-- BLOG -->
+<!-- CONTACT -->
 
-<section id="blog">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>Cẩm Nang Nghề Nghiệp</h2>
-
-<p>
-Kiến thức tuyển dụng và phát triển sự nghiệp mới nhất
-</p>
-
-</div>
-
-<div class="blog-grid">
-
-<div class="blog-card">
-
-<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop">
-
-<div class="blog-content">
-
-<h3>5 Bí Quyết Viết CV Chuyên Nghiệp</h3>
-
-<p>
-Những mẹo giúp CV nổi bật hơn trước nhà tuyển dụng.
-</p>
-
-<button class="blog-btn" onclick="readBlog()">
-Xem Thêm
-</button>
-
-</div>
-
-</div>
-
-<div class="blog-card">
-
-<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop">
-
-<div class="blog-content">
-
-<h3>Cách Phỏng Vấn Thành Công</h3>
-
-<p>
-Các kỹ năng trả lời phỏng vấn giúp tăng tỷ lệ trúng tuyển.
-</p>
-
-<button class="blog-btn" onclick="readBlog()">
-Xem Thêm
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- APPLY -->
-
-<section class="apply-section" id="apply">
+<section class="contact" id="contact">
 
 <div class="container">
 
-<div class="form-box">
+<div class="contact-box">
 
-<h2>Ứng Tuyển Ngay</h2>
+<h2>Gửi Hồ Sơ Ứng Tuyển</h2>
 
-<form onsubmit="submitForm(event)">
+<form>
 
 <div class="input-group">
 <label>Họ và tên</label>
-<input type="text" required>
+<input type="text">
 </div>
 
 <div class="input-group">
 <label>Email</label>
-<input type="email" required>
+<input type="email">
 </div>
 
 <div class="input-group">
@@ -1306,16 +873,18 @@ Xem Thêm
 <label>Vị trí ứng tuyển</label>
 
 <select>
-<option>Frontend Developer</option>
-<option>Digital Marketing</option>
-<option>UI UX Designer</option>
+
+<option>Nhân Viên Kinh Doanh</option>
+<option>Kế Toán Tổng Hợp</option>
+<option>Xuất Nhập Khẩu</option>
+
 </select>
 
 </div>
 
 <div class="input-group">
 <label>Link CV</label>
-<input type="text" placeholder="Google Drive hoặc CV online">
+<input type="text">
 </div>
 
 <div class="input-group">
@@ -1343,10 +912,10 @@ Gửi Hồ Sơ
 
 <div class="footer-box">
 
-<h3>CareerHub</h3>
+<h3>VinFast Careers</h3>
 
 <p>
-Nền tảng tuyển dụng chuyên nghiệp kết nối ứng viên và doanh nghiệp trên toàn quốc.
+Hệ thống tuyển dụng chuyên nghiệp dành cho nhân sự toàn quốc.
 </p>
 
 </div>
@@ -1355,20 +924,9 @@ Nền tảng tuyển dụng chuyên nghiệp kết nối ứng viên và doanh n
 
 <h3>Danh Mục</h3>
 
-<a href="#">Việc Làm IT</a>
-<a href="#">Marketing</a>
-<a href="#">Thiết Kế</a>
-<a href="#">Kinh Doanh</a>
-
-</div>
-
-<div class="footer-box">
-
-<h3>Thông Tin</h3>
-
-<a href="#">Điều khoản</a>
-<a href="#">Chính sách</a>
-<a href="#">Liên hệ</a>
+<p>Việc Làm IT</p>
+<p>Kinh Doanh</p>
+<p>Kế Toán</p>
 
 </div>
 
@@ -1376,7 +934,7 @@ Nền tảng tuyển dụng chuyên nghiệp kết nối ứng viên và doanh n
 
 <h3>Liên Hệ</h3>
 
-<p>Email: contact@careerhub.vn</p>
+<p>Email: hr@vinfast.vn</p>
 <p>Hotline: 0123 456 789</p>
 
 </div>
@@ -1384,55 +942,11 @@ Nền tảng tuyển dụng chuyên nghiệp kết nối ứng viên và doanh n
 </div>
 
 <div class="copy">
-© 2026 CareerHub Vietnam. All Rights Reserved.
+© 2026 VinFast Careers Vietnam
 </div>
 
 </footer>
 
-<!-- JAVASCRIPT -->
-
-<script>
-
-function scrollToJobs(){
-    document.getElementById("jobs").scrollIntoView({
-        behavior:"smooth"
-    });
-}
-
-function scrollToApply(){
-    document.getElementById("apply").scrollIntoView({
-        behavior:"smooth"
-    });
-}
-
-function searchJobs(){
-    alert("Đang tìm kiếm công việc phù hợp...");
-}
-
-function applyJob(job){
-    alert("Bạn đang ứng tuyển vị trí: " + job);
-    document.getElementById("apply").scrollIntoView({
-        behavior:"smooth"
-    });
-}
-
-function showMessage(){
-    alert("Chức năng đăng tuyển đang được cập nhật!");
-}
-
-function readBlog(){
-    alert("Bài viết đang được cập nhật!");
-}
-
-function submitForm(event){
-
-    event.preventDefault();
-
-    alert("Hồ sơ của bạn đã được gửi thành công!");
-
-}
-
-</script>
-
 </body>
+
 </html>
