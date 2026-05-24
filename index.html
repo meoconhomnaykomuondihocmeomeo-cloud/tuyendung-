@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VinFast Tuyển Dụng</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Website Tuyển Dụng</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -11,237 +14,429 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial;
+    font-family:'Poppins',sans-serif;
 }
 
 body{
-    background:#f4f6f9;
+    background:#f5f7fb;
+    color:#222;
 }
 
-.header{
-    background:#d70018;
-    color:white;
-    text-align:center;
-    padding:60px 20px;
+/* HEADER */
+
+header{
+    width:100%;
+    background:linear-gradient(135deg,#0052d4,#4364f7,#6fb1fc);
+    padding:20px 8%;
+    color:#fff;
 }
 
-.header h1{
-    font-size:42px;
-    margin-bottom:15px;
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
-.header p{
-    font-size:18px;
+.logo{
+    font-size:28px;
+    font-weight:700;
 }
 
-.banner{
-    background:url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1400') center/cover;
-    height:300px;
+.menu{
+    display:flex;
+    gap:25px;
 }
 
-.container{
-    width:90%;
-    max-width:950px;
-    margin:auto;
-    margin-top:-50px;
-    background:white;
-    padding:35px;
-    border-radius:15px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+.menu a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:500;
+    transition:0.3s;
 }
 
-h2{
-    color:#d70018;
+.menu a:hover{
+    opacity:0.8;
+}
+
+/* HERO */
+
+.hero{
+    padding:80px 8%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+
+.hero-text{
+    max-width:550px;
+}
+
+.hero-text h1{
+    font-size:52px;
+    line-height:1.2;
     margin-bottom:20px;
-    margin-top:30px;
 }
 
-.job-box{
-    background:#fafafa;
-    border-left:5px solid #d70018;
-    padding:18px;
-    margin-bottom:15px;
-    border-radius:8px;
+.hero-text p{
+    font-size:18px;
+    margin-bottom:30px;
+    color:#e8e8e8;
 }
 
-.job-box h3{
+.hero-btn{
+    padding:15px 35px;
+    border:none;
+    background:#fff;
+    color:#0052d4;
+    font-size:16px;
+    font-weight:600;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.hero-btn:hover{
+    transform:translateY(-3px);
+}
+
+.hero img{
+    width:450px;
+    max-width:100%;
+}
+
+/* JOBS */
+
+.jobs{
+    padding:70px 8%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    font-size:40px;
+    color:#111;
+}
+
+.job-list{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.job-card{
+    background:#fff;
+    border-radius:18px;
+    padding:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.job-card:hover{
+    transform:translateY(-6px);
+}
+
+.job-card h3{
+    font-size:24px;
     margin-bottom:10px;
 }
 
-label{
-    font-weight:bold;
-    display:block;
-    margin-top:18px;
+.company{
+    color:#0052d4;
+    font-weight:600;
+    margin-bottom:10px;
 }
 
-input,select,textarea{
+.location{
+    margin-bottom:15px;
+    color:#777;
+}
+
+.job-card p{
+    margin-bottom:20px;
+    color:#555;
+    line-height:1.6;
+}
+
+.apply-btn{
+    display:inline-block;
+    padding:12px 24px;
+    background:#0052d4;
+    color:#fff;
+    text-decoration:none;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.apply-btn:hover{
+    background:#003ea8;
+}
+
+/* FORM */
+
+.apply-section{
+    padding:80px 8%;
+    background:#fff;
+}
+
+.form-box{
+    max-width:700px;
+    margin:auto;
+    background:#f8f9fc;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.form-box h2{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.input-group{
+    margin-bottom:20px;
+}
+
+.input-group label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:500;
+}
+
+.input-group input,
+.input-group textarea,
+.input-group select{
     width:100%;
     padding:14px;
-    margin-top:8px;
-    border:1px solid #ccc;
-    border-radius:8px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    outline:none;
     font-size:15px;
 }
 
-.checkbox-group{
-    margin-top:15px;
+textarea{
+    resize:none;
+    height:120px;
 }
 
-.checkbox-group label{
-    font-weight:normal;
-    margin-bottom:10px;
-}
-
-button{
+.submit-btn{
     width:100%;
-    padding:16px;
-    background:#d70018;
-    color:white;
+    padding:15px;
     border:none;
+    background:#0052d4;
+    color:#fff;
+    font-size:17px;
     border-radius:10px;
-    font-size:18px;
-    margin-top:25px;
     cursor:pointer;
+    transition:0.3s;
 }
 
-button:hover{
-    background:#b00014;
+.submit-btn:hover{
+    background:#003ea8;
 }
 
-.footer{
+/* FOOTER */
+
+footer{
+    background:#0d1b2a;
+    color:#fff;
     text-align:center;
     padding:25px;
-    color:#666;
-    font-size:14px;
+    margin-top:50px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+        gap:40px;
+    }
+
+    .hero-text h1{
+        font-size:40px;
+    }
+
+    .navbar{
+        flex-direction:column;
+        gap:15px;
+    }
+
 }
 
 </style>
-
 </head>
 
 <body>
 
-<div class="header">
+<!-- HEADER -->
 
-<h1>VINFAST TUYỂN DỤNG 2026</h1>
+<header>
 
-<p>Gia nhập đội ngũ tiên phong trong ngành công nghiệp ô tô điện Việt Nam</p>
+    <div class="navbar">
+        <div class="logo">CAREER HUB</div>
 
-</div>
+        <div class="menu">
+            <a href="#">Trang chủ</a>
+            <a href="#">Tuyển dụng</a>
+            <a href="#">Giới thiệu</a>
+            <a href="#">Liên hệ</a>
+        </div>
+    </div>
 
-<div class="banner"></div>
+    <div class="hero">
 
-<div class="container">
+        <div class="hero-text">
+            <h1>Tìm Công Việc Mơ Ước Của Bạn</h1>
 
-<h2>VỊ TRÍ ĐANG TUYỂN</h2>
+            <p>
+                Hàng ngàn cơ hội việc làm hấp dẫn từ các công ty hàng đầu.
+                Ứng tuyển nhanh chóng chỉ với vài bước đơn giản.
+            </p>
 
-<div class="job-box">
-<h3>Kỹ thuật viên ô tô</h3>
-<p>Bảo trì, sửa chữa và kiểm tra xe điện VinFast.</p>
-</div>
+            <button class="hero-btn">
+                Ứng tuyển ngay
+            </button>
+        </div>
 
-<div class="job-box">
-<h3>Tư vấn bán hàng</h3>
-<p>Tư vấn sản phẩm và hỗ trợ khách hàng tại showroom.</p>
-</div>
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
 
-<div class="job-box">
-<h3>Chăm sóc khách hàng</h3>
-<p>Hỗ trợ giải đáp thông tin và xử lý yêu cầu khách hàng.</p>
-</div>
+    </div>
 
-<div class="job-box">
-<h3>Nhân viên marketing</h3>
-<p>Triển khai chiến dịch truyền thông và quảng bá thương hiệu.</p>
-</div>
+</header>
 
-<div class="job-box">
-<h3>Nhân viên hành chính nhân sự</h3>
-<p>Quản lý hồ sơ và hỗ trợ công tác nhân sự nội bộ.</p>
-</div>
+<!-- JOBS -->
 
-<div class="job-box">
-<h3>Kỹ sư phần mềm ô tô</h3>
-<p>Phát triển hệ thống công nghệ cho xe điện thông minh.</p>
-</div>
+<section class="jobs">
 
-<h2>THÔNG TIN ỨNG VIÊN</h2>
+    <div class="section-title">
+        <h2>Vị Trí Đang Tuyển</h2>
+    </div>
 
-<label>Họ và tên</label>
-<input type="text" placeholder="Nhập họ và tên">
+    <div class="job-list">
 
-<label>Ngày sinh</label>
-<input type="date">
+        <div class="job-card">
 
-<label>Giới tính</label>
-<select>
-<option>Nam</option>
-<option>Nữ</option>
-<option>Khác</option>
-</select>
+            <h3>Frontend Developer</h3>
 
-<label>Số điện thoại</label>
-<input type="text" placeholder="Nhập số điện thoại">
+            <div class="company">Công ty Công Nghệ ABC</div>
 
-<label>Email</label>
-<input type="email" placeholder="Nhập email">
+            <div class="location">📍 Hà Nội</div>
 
-<label>Địa chỉ hiện tại</label>
-<textarea rows="3" placeholder="Nhập địa chỉ hiện tại"></textarea>
+            <p>
+                Tuyển lập trình viên Frontend có kinh nghiệm ReactJS,
+                HTML, CSS, JavaScript.
+            </p>
 
-<label>Khu vực làm việc mong muốn</label>
-<select>
-<option>Hà Nội</option>
-<option>TP Hồ Chí Minh</option>
-<option>Hải Phòng</option>
-<option>Đà Nẵng</option>
-<option>Cần Thơ</option>
-</select>
+            <a href="#apply" class="apply-btn">
+                Ứng tuyển
+            </a>
 
-<label>Vị trí ứng tuyển</label>
+        </div>
 
-<div class="checkbox-group">
+        <div class="job-card">
 
-<label><input type="checkbox"> Kỹ thuật viên ô tô</label>
+            <h3>Digital Marketing</h3>
 
-<label><input type="checkbox"> Tư vấn bán hàng</label>
+            <div class="company">Công ty Media XYZ</div>
 
-<label><input type="checkbox"> Chăm sóc khách hàng</label>
+            <div class="location">📍 TP Hồ Chí Minh</div>
 
-<label><input type="checkbox"> Marketing</label>
+            <p>
+                Tuyển nhân viên Marketing chạy quảng cáo Facebook,
+                Google Ads và TikTok Ads.
+            </p>
 
-<label><input type="checkbox"> Nhân sự</label>
+            <a href="#apply" class="apply-btn">
+                Ứng tuyển
+            </a>
 
-<label><input type="checkbox"> Kỹ sư phần mềm</label>
+        </div>
 
-</div>
+        <div class="job-card">
 
-<label>Kinh nghiệm làm việc</label>
-<textarea rows="5" placeholder="Mô tả kinh nghiệm làm việc"></textarea>
+            <h3>Nhân Viên Sale</h3>
 
-<label>Trình độ học vấn</label>
-<select>
-<option>THPT</option>
-<option>Trung cấp</option>
-<option>Cao đẳng</option>
-<option>Đại học</option>
-<option>Sau đại học</option>
-</select>
-<label>Tải CV / Hồ sơ</label>
-<input type="file">
+            <div class="company">Tập đoàn VinFast</div>
 
-<label>Giới thiệu bản thân</label>
-<textarea rows="5" placeholder="Viết giới thiệu ngắn về bản thân"></textarea>
+            <div class="location">📍 Đà Nẵng</div>
 
-<button>GỬI HỒ SƠ ỨNG TUYỂN</button>
+            <p>
+                Tư vấn khách hàng, chăm sóc khách hàng và phát triển
+                doanh số bán hàng.
+            </p>
 
-</div>
+            <a href="#apply" class="apply-btn">
+                Ứng tuyển
+            </a>
 
-<div class="footer">
+        </div>
 
-© 2026 VinFast Recruitment. All rights reserved.
+    </div>
 
-</div>
+</section>
+
+<!-- APPLY FORM -->
+
+<section class="apply-section" id="apply">
+
+    <div class="form-box">
+
+        <h2>Form Ứng Tuyển</h2>
+
+        <form>
+
+            <div class="input-group">
+                <label>Họ và tên</label>
+                <input type="text" placeholder="Nhập họ tên">
+            </div>
+
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" placeholder="Nhập email">
+            </div>
+
+            <div class="input-group">
+                <label>Số điện thoại</label>
+                <input type="text" placeholder="Nhập số điện thoại">
+            </div>
+
+            <div class="input-group">
+                <label>Vị trí ứng tuyển</label>
+
+                <select>
+                    <option>Frontend Developer</option>
+                    <option>Digital Marketing</option>
+                    <option>Nhân Viên Sale</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label>Giới thiệu bản thân</label>
+
+                <textarea placeholder="Nhập thông tin..."></textarea>
+            </div>
+
+            <button class="submit-btn">
+                Gửi Hồ Sơ
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+    © 2026 Career Hub - Website tuyển dụng chuyên nghiệp
+</footer>
 
 </body>
 </html>
