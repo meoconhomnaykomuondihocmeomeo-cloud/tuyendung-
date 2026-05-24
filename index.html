@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Website Tuyển Dụng</title>
+<title>CareerHub - Tuyển Dụng Chuyên Nghiệp</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
@@ -14,186 +14,161 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
+    font-family:'Inter',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
     background:#f5f7fb;
-    color:#222;
+    color:#111827;
 }
 
 /* HEADER */
 
 header{
     width:100%;
-    background:linear-gradient(135deg,#0052d4,#4364f7,#6fb1fc);
-    padding:20px 8%;
-    color:#fff;
+    background:#0f172a;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
 }
 
 .navbar{
+    width:90%;
+    margin:auto;
     display:flex;
     justify-content:space-between;
     align-items:center;
+    padding:18px 0;
 }
 
 .logo{
     font-size:28px;
-    font-weight:700;
+    font-weight:800;
+    color:#fff;
 }
 
-.menu{
+.logo span{
+    color:#3b82f6;
+}
+
+.nav-links{
     display:flex;
-    gap:25px;
+    gap:30px;
 }
 
-.menu a{
+.nav-links a{
     color:#fff;
     text-decoration:none;
     font-weight:500;
     transition:0.3s;
 }
 
-.menu a:hover{
-    opacity:0.8;
+.nav-links a:hover{
+    color:#60a5fa;
+}
+
+.nav-btn{
+    padding:12px 22px;
+    background:#3b82f6;
+    border:none;
+    border-radius:12px;
+    color:#fff;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.nav-btn:hover{
+    background:#2563eb;
 }
 
 /* HERO */
 
 .hero{
-    padding:80px 8%;
+    width:100%;
+    min-height:90vh;
+    background:linear-gradient(rgba(15,23,42,0.88),rgba(15,23,42,0.88)),
+    url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1600&auto=format&fit=crop');
+    background-size:cover;
+    background-position:center;
     display:flex;
     align-items:center;
-    justify-content:space-between;
-    flex-wrap:wrap;
 }
 
-.hero-text{
-    max-width:550px;
+.hero-container{
+    width:90%;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
 }
 
 .hero-text h1{
-    font-size:52px;
-    line-height:1.2;
-    margin-bottom:20px;
+    color:#fff;
+    font-size:60px;
+    line-height:1.1;
+    margin-bottom:25px;
 }
 
 .hero-text p{
+    color:#d1d5db;
     font-size:18px;
-    margin-bottom:30px;
-    color:#e8e8e8;
+    line-height:1.7;
+    margin-bottom:35px;
 }
 
-.hero-btn{
-    padding:15px 35px;
+.hero-buttons{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.primary-btn{
+    padding:16px 34px;
+    background:#3b82f6;
+    color:#fff;
     border:none;
-    background:#fff;
-    color:#0052d4;
+    border-radius:14px;
     font-size:16px;
     font-weight:600;
-    border-radius:10px;
     cursor:pointer;
     transition:0.3s;
 }
 
-.hero-btn:hover{
+.primary-btn:hover{
+    background:#2563eb;
     transform:translateY(-3px);
 }
 
-.hero img{
-    width:450px;
-    max-width:100%;
-}
-
-/* JOBS */
-
-.jobs{
-    padding:70px 8%;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:50px;
-}
-
-.section-title h2{
-    font-size:40px;
-    color:#111;
-}
-
-.job-list{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:25px;
-}
-
-.job-card{
-    background:#fff;
-    border-radius:18px;
-    padding:25px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.08);
-    transition:0.3s;
-}
-
-.job-card:hover{
-    transform:translateY(-6px);
-}
-
-.job-card h3{
-    font-size:24px;
-    margin-bottom:10px;
-}
-
-.company{
-    color:#0052d4;
-    font-weight:600;
-    margin-bottom:10px;
-}
-
-.location{
-    margin-bottom:15px;
-    color:#777;
-}
-
-.job-card p{
-    margin-bottom:20px;
-    color:#555;
-    line-height:1.6;
-}
-
-.apply-btn{
-    display:inline-block;
-    padding:12px 24px;
-    background:#0052d4;
+.secondary-btn{
+    padding:16px 34px;
+    background:transparent;
+    border:2px solid #fff;
     color:#fff;
-    text-decoration:none;
-    border-radius:10px;
-    transition:0.3s;
+    border-radius:14px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
 }
 
-.apply-btn:hover{
-    background:#003ea8;
-}
+/* SEARCH */
 
-/* FORM */
-
-.apply-section{
-    padding:80px 8%;
+.search-box{
     background:#fff;
+    padding:35px;
+    border-radius:24px;
+    box-shadow:0 20px 60px rgba(0,0,0,0.15);
 }
 
-.form-box{
-    max-width:700px;
-    margin:auto;
-    background:#f8f9fc;
-    padding:40px;
-    border-radius:20px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.08);
-}
-
-.form-box h2{
-    text-align:center;
-    margin-bottom:30px;
+.search-box h3{
+    margin-bottom:25px;
+    font-size:28px;
 }
 
 .input-group{
@@ -203,68 +178,258 @@ header{
 .input-group label{
     display:block;
     margin-bottom:8px;
-    font-weight:500;
+    font-weight:600;
 }
 
 .input-group input,
-.input-group textarea,
-.input-group select{
+.input-group select,
+.input-group textarea{
     width:100%;
-    padding:14px;
-    border:1px solid #ddd;
-    border-radius:10px;
-    outline:none;
+    padding:15px;
+    border:1px solid #dbe3ef;
+    border-radius:12px;
     font-size:15px;
+    outline:none;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus{
+    border-color:#3b82f6;
+}
+
+/* SECTION */
+
+section{
+    padding:90px 0;
+}
+
+.container{
+    width:90%;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title h2{
+    font-size:44px;
+    margin-bottom:15px;
+}
+
+.section-title p{
+    color:#6b7280;
+    font-size:18px;
+}
+
+/* STATS */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.stat-card{
+    background:#fff;
+    padding:35px;
+    border-radius:22px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.06);
+}
+
+.stat-card h3{
+    font-size:42px;
+    color:#3b82f6;
+    margin-bottom:10px;
+}
+
+/* JOBS */
+
+.job-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+    gap:30px;
+}
+
+.job-card{
+    background:#fff;
+    border-radius:24px;
+    padding:30px;
+    box-shadow:0 10px 35px rgba(0,0,0,0.06);
+    transition:0.3s;
+}
+
+.job-card:hover{
+    transform:translateY(-8px);
+}
+
+.job-top{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:20px;
+}
+
+.job-badge{
+    background:#dbeafe;
+    color:#2563eb;
+    padding:8px 14px;
+    border-radius:999px;
+    font-size:13px;
+    font-weight:600;
+}
+
+.job-card h3{
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+.company{
+    font-weight:600;
+    color:#2563eb;
+    margin-bottom:10px;
+}
+
+.job-info{
+    color:#6b7280;
+    margin-bottom:20px;
+    line-height:1.8;
+}
+
+.job-footer{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:25px;
+}
+
+.salary{
+    font-size:22px;
+    font-weight:700;
+}
+
+.apply-btn{
+    padding:12px 24px;
+    background:#3b82f6;
+    color:#fff;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    font-weight:600;
+}
+
+/* FORM */
+
+.form-section{
+    background:#0f172a;
+}
+
+.form-container{
+    max-width:850px;
+    margin:auto;
+    background:#fff;
+    padding:50px;
+    border-radius:28px;
+}
+
+.form-container h2{
+    text-align:center;
+    margin-bottom:35px;
+    font-size:38px;
 }
 
 textarea{
+    height:140px;
     resize:none;
-    height:120px;
 }
 
 .submit-btn{
     width:100%;
-    padding:15px;
+    padding:18px;
     border:none;
-    background:#0052d4;
+    background:#3b82f6;
     color:#fff;
+    border-radius:14px;
     font-size:17px;
-    border-radius:10px;
+    font-weight:700;
     cursor:pointer;
     transition:0.3s;
 }
 
 .submit-btn:hover{
-    background:#003ea8;
+    background:#2563eb;
 }
 
 /* FOOTER */
 
 footer{
-    background:#0d1b2a;
+    background:#020617;
     color:#fff;
+    padding:70px 0 30px;
+}
+
+.footer-grid{
+    width:90%;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:40px;
+    margin-bottom:50px;
+}
+
+.footer-box h3{
+    margin-bottom:20px;
+    font-size:22px;
+}
+
+.footer-box p,
+.footer-box a{
+    color:#cbd5e1;
+    line-height:1.8;
+    text-decoration:none;
+    display:block;
+}
+
+.copyright{
     text-align:center;
-    padding:25px;
-    margin-top:50px;
+    color:#94a3b8;
+    border-top:1px solid rgba(255,255,255,0.1);
+    padding-top:25px;
 }
 
 /* RESPONSIVE */
 
-@media(max-width:900px){
+@media(max-width:980px){
 
-    .hero{
-        flex-direction:column;
-        text-align:center;
-        gap:40px;
+    .hero-container{
+        grid-template-columns:1fr;
     }
 
     .hero-text h1{
-        font-size:40px;
+        font-size:42px;
     }
 
     .navbar{
         flex-direction:column;
-        gap:15px;
+        gap:20px;
+    }
+
+}
+
+@media(max-width:600px){
+
+    .hero-text h1{
+        font-size:34px;
+    }
+
+    .section-title h2{
+        font-size:32px;
+    }
+
+    .form-container{
+        padding:30px;
     }
 
 }
@@ -278,164 +443,377 @@ footer{
 
 <header>
 
-    <div class="navbar">
-        <div class="logo">CAREER HUB</div>
+<div class="navbar">
 
-        <div class="menu">
-            <a href="#">Trang chủ</a>
-            <a href="#">Tuyển dụng</a>
-            <a href="#">Giới thiệu</a>
-            <a href="#">Liên hệ</a>
-        </div>
-    </div>
+<div class="logo">
+Career<span>Hub</span>
+</div>
 
-    <div class="hero">
+<div class="nav-links">
+<a href="#">Trang Chủ</a>
+<a href="#jobs">Việc Làm</a>
+<a href="#apply">Ứng Tuyển</a>
+<a href="#">Liên Hệ</a>
+</div>
 
-        <div class="hero-text">
-            <h1>Tìm Công Việc Mơ Ước Của Bạn</h1>
+<button class="nav-btn">
+Đăng Tin Tuyển Dụng
+</button>
 
-            <p>
-                Hàng ngàn cơ hội việc làm hấp dẫn từ các công ty hàng đầu.
-                Ứng tuyển nhanh chóng chỉ với vài bước đơn giản.
-            </p>
-
-            <button class="hero-btn">
-                Ứng tuyển ngay
-            </button>
-        </div>
-
-        <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1400">
-
-    </div>
+</div>
 
 </header>
 
-<!-- JOBS -->
+<!-- HERO -->
 
-<section class="jobs">
+<section class="hero">
 
-    <div class="section-title">
-        <h2>Vị Trí Đang Tuyển</h2>
-    </div>
+<div class="hero-container">
 
-    <div class="job-list">
+<div class="hero-text">
 
-        <div class="job-card">
+<h1>
+Nền Tảng Tuyển Dụng Chuyên Nghiệp
+</h1>
 
-            <h3>Frontend Developer</h3>
+<p>
+Kết nối ứng viên và doanh nghiệp nhanh chóng.
+Hàng ngàn cơ hội việc làm lương cao đang chờ bạn.
+</p>
 
-            <div class="company">Công ty Công Nghệ ABC</div>
+<div class="hero-buttons">
 
-            <div class="location">📍 Hà Nội</div>
+<button class="primary-btn">
+Tìm Việc Ngay
+</button>
 
-            <p>
-                Tuyển lập trình viên Frontend có kinh nghiệm ReactJS,
-                HTML, CSS, JavaScript.
-            </p>
+<button class="secondary-btn">
+Xem Tuyển Dụng
+</button>
 
-            <a href="#apply" class="apply-btn">
-                Ứng tuyển
-            </a>
+</div>
 
-        </div>
+</div>
 
-        <div class="job-card">
+<div class="search-box">
 
-            <h3>Digital Marketing</h3>
+<h3>Tìm kiếm công việc</h3>
 
-            <div class="company">Công ty Media XYZ</div>
+<div class="input-group">
+<label>Vị trí công việc</label>
+<input type="text" placeholder="VD: Frontend Developer">
+</div>
 
-            <div class="location">📍 TP Hồ Chí Minh</div>
+<div class="input-group">
+<label>Khu vực</label>
 
-            <p>
-                Tuyển nhân viên Marketing chạy quảng cáo Facebook,
-                Google Ads và TikTok Ads.
-            </p>
+<select>
+<option>Hà Nội</option>
+<option>TP Hồ Chí Minh</option>
+<option>Đà Nẵng</option>
+<option>Cần Thơ</option>
+</select>
+</div>
 
-            <a href="#apply" class="apply-btn">
-                Ứng tuyển
-            </a>
+<div class="input-group">
+<label>Mức lương</label>
 
-        </div>
+<select>
+<option>10 - 20 triệu</option>
+<option>20 - 30 triệu</option>
+<option>30 - 50 triệu</option>
+<option>50+ triệu</option>
+</select>
+</div>
 
-        <div class="job-card">
+<button class="submit-btn">
+Tìm Việc
+</button>
 
-            <h3>Nhân Viên Sale</h3>
+</div>
 
-            <div class="company">Tập đoàn VinFast</div>
-
-            <div class="location">📍 Đà Nẵng</div>
-
-            <p>
-                Tư vấn khách hàng, chăm sóc khách hàng và phát triển
-                doanh số bán hàng.
-            </p>
-
-            <a href="#apply" class="apply-btn">
-                Ứng tuyển
-            </a>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
-<!-- APPLY FORM -->
+<!-- STATS -->
 
-<section class="apply-section" id="apply">
+<section>
 
-    <div class="form-box">
+<div class="container">
 
-        <h2>Form Ứng Tuyển</h2>
+<div class="section-title">
 
-        <form>
+<h2>Hệ Thống Tuyển Dụng Hàng Đầu</h2>
 
-            <div class="input-group">
-                <label>Họ và tên</label>
-                <input type="text" placeholder="Nhập họ tên">
-            </div>
+<p>
+Nền tảng kết nối doanh nghiệp và ứng viên toàn quốc
+</p>
 
-            <div class="input-group">
-                <label>Email</label>
-                <input type="email" placeholder="Nhập email">
-            </div>
+</div>
 
-            <div class="input-group">
-                <label>Số điện thoại</label>
-                <input type="text" placeholder="Nhập số điện thoại">
-            </div>
+<div class="stats">
 
-            <div class="input-group">
-                <label>Vị trí ứng tuyển</label>
+<div class="stat-card">
+<h3>10K+</h3>
+<p>Ứng viên hoạt động</p>
+</div>
 
-                <select>
-                    <option>Frontend Developer</option>
-                    <option>Digital Marketing</option>
-                    <option>Nhân Viên Sale</option>
-                </select>
-            </div>
+<div class="stat-card">
+<h3>2500+</h3>
+<p>Doanh nghiệp</p>
+</div>
 
-            <div class="input-group">
-                <label>Giới thiệu bản thân</label>
+<div class="stat-card">
+<h3>5000+</h3>
+<p>Việc làm mới</p>
+</div>
 
-                <textarea placeholder="Nhập thông tin..."></textarea>
-            </div>
+<div class="stat-card">
+<h3>98%</h3>
+<p>Khách hàng hài lòng</p>
+</div>
 
-            <button class="submit-btn">
-                Gửi Hồ Sơ
-            </button>
+</div>
 
-        </form>
+</div>
 
-    </div>
+</section>
+
+<!-- JOBS -->
+
+<section id="jobs">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Việc Làm Nổi Bật</h2>
+
+<p>
+Những vị trí tuyển dụng mới nhất hôm nay
+</p>
+
+</div>
+
+<div class="job-grid">
+
+<div class="job-card">
+
+<div class="job-top">
+<div class="job-badge">HOT</div>
+<div>Full Time</div>
+</div>
+
+<h3>Frontend Developer</h3>
+
+<div class="company">
+Công ty Công Nghệ ABC
+</div>
+
+<div class="job-info">
+📍 Hà Nội <br>
+🕒 Hạn nộp: 30/12/2026 <br>
+💻 ReactJS / JavaScript / UI UX
+</div>
+
+<div class="job-footer">
+
+<div class="salary">
+25 triệu
+</div>
+
+<button class="apply-btn">
+Ứng Tuyển
+</button>
+
+</div>
+
+</div>
+
+<div class="job-card">
+
+<div class="job-top">
+<div class="job-badge">NEW</div>
+<div>Remote</div>
+</div>
+
+<h3>Digital Marketing</h3>
+
+<div class="company">
+Media Global
+</div>
+
+<div class="job-info">
+📍 TP Hồ Chí Minh <br>
+🕒 Hạn nộp: 10/01/2027 <br>
+📈 Facebook Ads / Google Ads
+</div>
+
+<div class="job-footer">
+
+<div class="salary">
+18 triệu
+</div>
+
+<button class="apply-btn">
+Ứng Tuyển
+</button>
+
+</div>
+
+</div>
+
+<div class="job-card">
+
+<div class="job-top">
+<div class="job-badge">VIP</div>
+<div>Hybrid</div>
+</div>
+
+<h3>UI UX Designer</h3>
+
+<div class="company">
+Design Studio VN
+</div>
+
+<div class="job-info">
+📍 Đà Nẵng <br>
+🕒 Hạn nộp: 05/01/2027 <br>
+🎨 Figma / Photoshop / UX
+</div>
+
+<div class="job-footer">
+
+<div class="salary">
+30 triệu
+</div>
+
+<button class="apply-btn">
+Ứng Tuyển
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- APPLY -->
+
+<section class="form-section" id="apply">
+
+<div class="container">
+
+<div class="form-container">
+
+<h2>Ứng Tuyển Ngay</h2>
+
+<form>
+
+<div class="input-group">
+<label>Họ và tên</label>
+<input type="text" required>
+</div>
+
+<div class="input-group">
+<label>Email</label>
+<input type="email" required>
+</div>
+
+<div class="input-group">
+<label>Số điện thoại</label>
+<input type="text">
+</div>
+
+<div class="input-group">
+<label>Vị trí ứng tuyển</label>
+
+<select>
+<option>Frontend Developer</option>
+<option>Digital Marketing</option>
+<option>UI UX Designer</option>
+</select>
+</div>
+
+<div class="input-group">
+<label>Link CV</label>
+<input type="text" placeholder="Google Drive hoặc CV online">
+</div>
+
+<div class="input-group">
+<label>Giới thiệu bản thân</label>
+<textarea></textarea>
+</div>
+
+<button class="submit-btn">
+Gửi Hồ Sơ Ứng Tuyển
+</button>
+
+</form>
+
+</div>
+
+</div>
 
 </section>
 
 <!-- FOOTER -->
 
 <footer>
-    © 2026 Career Hub - Website tuyển dụng chuyên nghiệp
+
+<div class="footer-grid">
+
+<div class="footer-box">
+
+<h3>CareerHub</h3>
+
+<p>
+Nền tảng tuyển dụng và tìm kiếm việc làm chuyên nghiệp tại Việt Nam.
+</p>
+
+</div>
+
+<div class="footer-box">
+
+<h3>Danh Mục</h3>
+
+<a href="#">Công nghệ</a>
+<a href="#">Marketing</a>
+<a href="#">Kinh doanh</a>
+<a href="#">Thiết kế</a>
+
+</div>
+
+<div class="footer-box">
+
+<h3>Thông Tin</h3>
+
+<a href="#">Điều khoản</a>
+<a href="#">Chính sách</a>
+<a href="#">Liên hệ</a>
+
+</div>
+
+<div class="footer-box">
+
+<h3>Liên Hệ</h3>
+
+<p>Email: contact@careerhub.vn</p>
+<p>Hotline: 0123 456 789</p>
+
+</div>
+
+</div>
+
+<div class="copyright">
+© 2026 CareerHub. All Rights Reserved.
+</div>
+
 </footer>
 
 </body>
